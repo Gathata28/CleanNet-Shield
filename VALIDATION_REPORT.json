@@ -1,5 +1,5 @@
 {
-  "validation_date": "2025-06-27T21:11:36.382002",
+  "validation_date": "2025-06-27T21:18:30.491912",
   "project_name": "CleanNet Shield",
   "version": "2.0.0",
   "tests": {
@@ -9,14 +9,14 @@
     "Configuration": true,
     "Data Directories": true,
     "Documentation": true,
-    "Scripts": false,
+    "Scripts": true,
     "Deployment Files": true
   },
   "summary": {
     "total_tests": 8,
-    "passed_tests": 5,
-    "success_rate": 62.5,
-    "deployment_status": "NOT_READY"
+    "passed_tests": 6,
+    "success_rate": 75.0,
+    "deployment_status": "MOSTLY_READY"
   },
   "recommendations": [
     "Fix module import issues - check Python path and dependencies",
