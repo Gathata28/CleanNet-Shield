@@ -16,7 +16,7 @@ setup(
     description="A comprehensive adult content blocker and recovery tool for Windows",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/kWan/cleannet-shield",
+    url="https://github.com/Gathata28/cleannet-shield",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 5 - Production/Stable",

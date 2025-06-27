@@ -1,24 +1,25 @@
 {
-  "validation_date": "2025-06-27T18:26:05.737360",
+  "validation_date": "2025-06-27T21:01:44.978585",
   "project_name": "CleanNet Shield",
   "version": "2.0.0",
   "tests": {
-    "Module Imports": true,
-    "Core Objects": true,
+    "Module Imports": false,
+    "Core Objects": false,
     "File Structure": true,
     "Configuration": true,
     "Data Directories": true,
     "Documentation": true,
-    "Scripts": true,
+    "Scripts": false,
     "Deployment Files": true
   },
   "summary": {
     "total_tests": 8,
-    "passed_tests": 8,
-    "success_rate": 100.0,
-    "deployment_status": "READY"
+    "passed_tests": 5,
+    "success_rate": 62.5,
+    "deployment_status": "NOT_READY"
   },
   "recommendations": [
-    "All tests passed - project is ready for deployment!"
+    "Fix module import issues - check Python path and dependencies",
+    "Resolve object creation errors - check module dependencies"
   ]
 }
