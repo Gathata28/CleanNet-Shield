@@ -15,7 +15,8 @@ def check_deployment_readiness():
     # Check core files
     core_files = [
         "main.py", "launcher.py", "requirements.txt",
-        "README.md", "LICENSE", "setup.py"
+        "README.md", "LICENSE", "setup.py", ".gitignore",
+        "gui_simple_modern.py"
     ]
     
     print("📁 Checking core files...")

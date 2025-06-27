@@ -69,7 +69,8 @@ def test_all_modules():
     required_files = [
         "main.py", "launcher.py", "requirements.txt",
         "README.md", "LICENSE", "CONTRIBUTING.md",
-        "setup.py", "RELEASE_NOTES.md"
+        "setup.py", "RELEASE_NOTES.md", ".gitignore",
+        "gui_simple_modern.py", "final_check.py"
     ]
     
     required_dirs = [
@@ -157,7 +158,7 @@ def test_all_modules():
     # Test 8: Deployment Files
     print("\n📦 Testing Deployment Files...")
     deploy_files = [
-        ".gitignore", "deploy.py", "DEPLOYMENT_SUCCESS.md"
+        ".gitignore", "DEPLOYMENT_SUCCESS.md"
     ]
     
     deploy_exists = all(os.path.exists(os.path.join(project_root, deploy)) for deploy in deploy_files)
