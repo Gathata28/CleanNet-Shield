@@ -8,8 +8,8 @@ import json
 import smtplib
 import requests
 from datetime import datetime, timedelta
-from email.mime.text import MimeText
-from email.mime.multipart import MimeMultipart
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from typing import Dict, List, Optional, Any
 
 # Handle imports for both standalone and package usage
@@ -211,7 +211,7 @@ Sent automatically by your Adult Content Blocker accountability system.
                 for resource in self.config["emergency_resources"]:
                     body += f"• {resource}\\n"
             
-            msg.attach(MimeText(body, 'plain'))
+            msg.attach(MIMEText(body, 'plain'))
             
             # Send to all configured emails
             smtp_server = smtplib.SMTP(email_settings["smtp_server"], email_settings["smtp_port"])

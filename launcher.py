@@ -45,6 +45,14 @@ def install_dependencies():
 
 def main():
     """Main launcher function"""
+    import argparse
+    
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description="CleanNet Shield Launcher")
+    parser.add_argument("--force-run", action="store_true", 
+                       help="Skip admin privilege check (use when already running as admin)")
+    args = parser.parse_args()
+    
     print("=" * 60)
     print("🛡️  ADULT CONTENT BLOCKER & RECOVERY TOOL")
     print("=" * 60)
@@ -54,8 +62,8 @@ def main():
         input("Press Enter to exit...")
         return
     
-    # Check admin privileges on Windows
-    if os.name == 'nt' and not check_admin_privileges():
+    # Check admin privileges on Windows (unless force-run is specified)
+    if not args.force_run and os.name == 'nt' and not check_admin_privileges():
         print("⚠️  WARNING: This application requires administrator privileges")
         print("   Please right-click and 'Run as administrator'")
         print("   Some features may not work without admin access.")
