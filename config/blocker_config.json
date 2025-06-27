@@ -1,0 +1,128 @@
+{
+  "version": "2.0",
+  "lastUpdated": "2025-06-27",
+  "updateSources": [
+    {
+      "name": "StevenBlack Hosts",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts",
+      "type": "hosts",
+      "priority": 1,
+      "active": true
+    },
+    {
+      "name": "AdGuard Base Filter",
+      "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers.txt",
+      "type": "adblock",
+      "priority": 2,
+      "active": true
+    },
+    {
+      "name": "Ultimate Blocker Main List",
+      "url": "https://raw.githubusercontent.com/ultimate-blocker/lists/main/comprehensive.json",
+      "type": "json",
+      "priority": 3,
+      "active": true
+    },
+    {
+      "name": "EasyList Adult",
+      "url": "https://easylist-downloads.adblockplus.org/easylist.txt",
+      "type": "adblock",
+      "priority": 4,
+      "active": true
+    }
+  ],
+  "categories": {
+    "mainstream_adult": {
+      "enabled": true,
+      "sources": ["all"],
+      "last_count": 1500
+    },
+    "reddit_nsfw": {
+      "enabled": true,
+      "sources": ["manual", "auto_detect"],
+      "last_count": 150
+    },
+    "escort_services": {
+      "enabled": true,
+      "sources": ["manual", "crowdsource"],
+      "last_count": 40
+    },
+    "fetish_communities": {
+      "enabled": true,
+      "sources": ["manual"],
+      "last_count": 20
+    },
+    "torrent_adult": {
+      "enabled": true,
+      "sources": ["manual", "auto_detect"],
+      "last_count": 10
+    }
+  },
+  "detection_patterns": {
+    "adult_keywords": [
+      "xxx", "porn", "sex", "adult", "nude", "naked", "cam", "escort", 
+      "fetish", "bdsm", "milf", "teen", "anal", "oral", "erotic", "sexy",
+      "strip", "webcam", "livecam", "onlyfans", "premium", "vip"
+    ],
+    "suspicious_tlds": [
+      ".xxx", ".sex", ".porn", ".adult", ".cam"
+    ],
+    "social_patterns": [
+      "/r/gonewild", "/r/nsfw", "/r/porn", "instagram.com/explore/tags/nsfw",
+      "twitter.com/search?q=%23nsfw", "tiktok.com/tag/nsfw"
+    ]
+  },
+  "blocking_methods": {
+    "hosts_file": {
+      "enabled": true,
+      "ipv4_redirect": "127.0.0.1",
+      "ipv6_redirect": "::",
+      "double_block": true
+    },
+    "dns_filtering": {
+      "enabled": true,
+      "primary_dns": "1.1.1.3",
+      "secondary_dns": "1.0.0.3",
+      "backup_dns": ["208.67.222.123", "208.67.220.123"]
+    },
+    "registry_blocking": {
+      "enabled": true,
+      "ie_restricted_zones": true,
+      "edge_policy": true,
+      "chrome_policy": true
+    },
+    "firewall_blocking": {
+      "enabled": true,
+      "outbound_rules": true,
+      "proxy_port_blocking": true,
+      "max_sites": 50
+    },
+    "browser_extensions": {
+      "enabled": false,
+      "ublock_origin": true,
+      "adblock_plus": true,
+      "custom_filters": true
+    }
+  },
+  "auto_update": {
+    "enabled": true,
+    "interval_hours": 24,
+    "retry_attempts": 3,
+    "fallback_enabled": true,
+    "notification_enabled": true,
+    "backup_before_update": true
+  },
+  "detection": {
+    "new_site_scanning": true,
+    "browser_history_analysis": false,
+    "network_traffic_analysis": false,
+    "crowdsource_reporting": true
+  },
+  "recovery_features": {
+    "motivational_messages": true,
+    "confirmation_required": true,
+    "countdown_timer": 30,
+    "emergency_contacts": true,
+    "progress_tracking": true
+  }
+}

@@ -1,0 +1,21 @@
+# Core dependencies for Adult Content Blocker & Recovery Tool
+requests>=2.28.0
+
+# Optional: Advanced GUI components
+# tkinter is included with Python
+
+# Optional: For packaging to executable
+# pyinstaller>=5.0.0
+
+# Optional: For scheduling features
+# schedule>=1.2.0
+
+# Optional: For system tray integration
+# pystray>=0.19.0
+# Pillow>=9.0.0
+
+# Optional: For encrypted credential storage
+# cryptography>=3.4.0
+
+# Note: Most functionality uses Python standard library
+# No heavy dependencies required for core features
