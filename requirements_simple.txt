@@ -1,0 +1,19 @@
+# 💻 SIMPLE PERSONAL LAPTOP ENHANCEMENTS
+# Optional packages to make your existing app look better
+# Install only if you want visual improvements - your app works fine without these!
+
+# === OPTIONAL: BETTER VISUAL APPEARANCE ===
+customtkinter>=5.2.0      # Modern Tkinter themes (makes GUI look 10x better)
+
+# === OPTIONAL: SYSTEM TRAY INTEGRATION ===
+pystray>=0.19.0           # Minimize to system tray
+Pillow>=9.0.0             # For tray icon creation
+
+# === OPTIONAL: ENHANCED SCHEDULING ===
+schedule>=1.2.0           # Better task scheduling (if you want)
+
+# === YOUR EXISTING DEPENDENCIES (KEEP THESE) ===
+requests>=2.28.0          # For blocklist updates (YOU NEED THIS)
+
+# Note: Everything else your app needs is built into Python!
+# Your app is already excellent - these just add polish

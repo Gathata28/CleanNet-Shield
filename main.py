@@ -48,6 +48,14 @@ class AdultBlockerApp:
             sys.exit(1)
         
         self.setup_gui()
+        
+        # Add modern theme to existing GUI (optional enhancement)
+        try:
+            from gui_simple_modern import add_modern_features_to_existing_app
+            add_modern_features_to_existing_app(self.root, "CleanNet Shield")
+        except ImportError:
+            print("Modern theme not available - your app works fine without it!")
+        
         self.logger.log("Application started")
     
     def setup_gui(self):
