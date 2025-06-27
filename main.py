@@ -31,6 +31,23 @@ except ImportError as e:
     print("Please ensure all modules are in the correct location.")
     sys.exit(1)
 
+# --- Centralized admin check using permissions utility ---
+def ensure_admin_rights():
+    try:
+        from utils.permissions import ensure_admin_rights
+        ensure_admin_rights()
+    except ImportError:
+        # Fallback: manual check
+        import ctypes
+        if not (ctypes.windll.shell32.IsUserAnAdmin()):
+            print("Administrator privileges required! Relaunching as administrator...")
+            params = ' '.join(['"{}"'.format(arg) for arg in sys.argv])
+            ctypes.windll.shell32.ShellExecuteW(
+                None, "runas", sys.executable, params, None, 1)
+            sys.exit(0)
+
+ensure_admin_rights()
+
 class AdultBlockerApp:
     def __init__(self):
         self.logger = Logger()
@@ -40,12 +57,6 @@ class AdultBlockerApp:
         self.journal = Journal()
         self.streak_tracker = StreakTracker()
         self.accountability = AccountabilityBot()
-        
-        # Check admin rights
-        if not check_admin_rights():
-            messagebox.showerror("Admin Required", 
-                               "This application requires administrator privileges to modify system settings.")
-            sys.exit(1)
         
         self.setup_gui()
         

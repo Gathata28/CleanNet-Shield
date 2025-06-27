@@ -65,6 +65,9 @@ class DNSConfig:
         Returns:
             Tuple of (success, output)
         """
+        # Ensure PowerShell is called as 'powershell.exe' for Windows compatibility
+        if command and command[0] == 'powershell':
+            command[0] = 'powershell.exe'
         try:
             result = subprocess.run(
                 command,
