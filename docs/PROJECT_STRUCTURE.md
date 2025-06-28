@@ -43,7 +43,7 @@ CleanNet Shield/
 ├── gui_simple_modern.py     # Modern GUI implementation
 ├── launcher.py              # Application launcher
 ├── LICENSE                  # Software license (MIT)
-├── main.py                  # Main application entry point
+├── main.py                  # Main application entry point (root)
 ├── README.md                # Project overview
 ├── RELEASE_NOTES.md         # Release notes
 ├── requirements.txt         # Python dependencies
@@ -51,15 +51,22 @@ CleanNet Shield/
 ├── SIMPLE_PERSONAL_PLAN.md  # Personal app plan
 ├── validate_deployment.py   # Detailed validation script
 └── VALIDATION_REPORT.json   # Validation results
+├── src/
+│   ├── main.py             # (secondary/dev entry point)
+│   ├── launcher.py         # (secondary/dev launcher)
+│   └── gui/
+│       ├── launcher.py     # GUI launcher logic
+│       └── main_window.py  # Main GUI window
+└── test_phase3_gui.py      # Test suite
 ```
 
 ## Main Components
 
 ### 1. Core Application Files
 
-- `main.py` - Main application with the comprehensive GUI
-- `launcher.py` - Bootstrap script that handles initial setup
-- `gui_simple_modern.py` - Modern user interface implementation
+- `main.py` - Main application entry point (root)
+- `src/gui/launcher.py` - GUI launcher logic
+- `src/gui/main_window.py` - Modern GUI implementation
 
 ### 2. Blocking Components (`blocker/`)
 

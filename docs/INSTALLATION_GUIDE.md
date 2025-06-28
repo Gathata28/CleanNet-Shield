@@ -218,3 +218,36 @@ cd C:\Users\HomePC\ContentBlocker\AdultBlockerApp
 python test_suite.py
 python launcher.py
 ```
+
+## Quick Start
+
+1. **Clone or download** the repository
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Run the application**:
+   ```bash
+   python main.py
+   ```
+   - This will launch the GUI by default.
+   - To run tests: `python main.py --test`
+
+## Developer Usage
+- You can also run from the src directory for development:
+  ```bash
+  python src/main.py
+  ```
+- Or launch the GUI directly:
+  ```bash
+  python -m src.gui.launcher
+  ```
+
+## Notes
+- Always run as administrator for full functionality.
+- The main entry point is now `main.py` at the project root.
+- Old/empty entry points in src/ are no longer used.
+
+## Troubleshooting
+- If you see import errors, ensure you are running from the project root and have installed all dependencies.
+- For advanced usage, see the README.md.
