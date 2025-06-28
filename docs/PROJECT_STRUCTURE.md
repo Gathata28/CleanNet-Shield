@@ -2,7 +2,7 @@
 
 ## Directory Structure
 
-```
+```text
 CleanNet Shield/
 ├── blocker/                 # Content blocking functionality
 │   ├── __init__.py
@@ -56,33 +56,40 @@ CleanNet Shield/
 ## Main Components
 
 ### 1. Core Application Files
+
 - `main.py` - Main application with the comprehensive GUI
 - `launcher.py` - Bootstrap script that handles initial setup
 - `gui_simple_modern.py` - Modern user interface implementation
 
 ### 2. Blocking Components (`blocker/`)
+
 - `hosts_blocker.py` - System hosts file configuration for domain blocking
 - `dns_config.py` - DNS server configuration for filtered internet
 - `blocklist_updater.py` - Updates blocklists from various sources
 
 ### 3. Recovery Tools (`recovery/`)
+
 - `streak_tracker.py` - Tracks daily streaks and achievements
 - `journaling.py` - Daily journaling system
 - `accountability.py` - External accountability notifications
 
 ### 4. Utilities (`utils/`)
+
 - `logger.py` - Logging system with rotation and formatting
 - `permissions.py` - Admin privilege detection and elevation
 
 ### 5. Data Storage (`data/`)
+
 - Configuration files and cached blocklists
 - User data (journals, streaks, logs, accountability)
 
 ### 6. Documentation (`docs/`)
+
 - Installation guides
 - Project overview
 - Product requirements document
 
 ### 7. Scripts
+
 - Installation and setup scripts
 - Administrative execution helpers
