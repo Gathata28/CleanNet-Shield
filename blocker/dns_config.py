@@ -65,20 +65,48 @@ class DNSConfig:
         Returns:
             Tuple of (success, output)
         """
-        # Ensure PowerShell is called as 'powershell.exe' for Windows compatibility
-        if command and command[0] == 'powershell':
-            command[0] = 'powershell.exe'
         try:
+            # For Windows, try to find the executable
+            if command and command[0] in ['powershell', 'powershell.exe']:
+                # Try different PowerShell paths
+                powershell_paths = [
+                    'powershell.exe',
+                    'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe',
+                    'C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe'
+                ]
+                
+                for path in powershell_paths:
+                    try:
+                        test_command = [path] + command[1:]
+                        result = subprocess.run(
+                            test_command,
+                            capture_output=True,
+                            text=True,
+                            timeout=30
+                        )
+                        if result.returncode == 0:
+                            return True, result.stdout
+                    except (subprocess.TimeoutExpired, FileNotFoundError, OSError):
+                        continue
+                
+                # If PowerShell fails, return a helpful error
+                return False, "PowerShell not available or command failed"
+            
+            # For other commands, try direct execution
             result = subprocess.run(
                 command,
                 capture_output=True,
                 text=True,
-                check=True
+                timeout=30
             )
-            return True, result.stdout
-        except subprocess.CalledProcessError as e:
-            self.logger.error(f"Command failed: {' '.join(command)}, Error: {e.stderr}")
-            return False, e.stderr
+            return result.returncode == 0, result.stdout
+            
+        except subprocess.TimeoutExpired:
+            self.logger.error(f"Command timed out: {' '.join(command)}")
+            return False, "Command timed out"
+        except FileNotFoundError:
+            self.logger.error(f"Command not found: {' '.join(command)}")
+            return False, "Command not found"
         except Exception as e:
             self.logger.error(f"Command execution failed: {e}")
             return False, str(e)
@@ -91,22 +119,49 @@ class DNSConfig:
             List of interface names
         """
         try:
+            # Try PowerShell first
             success, output = self._run_command([
-                'powershell', '-Command',
+                'powershell.exe', '-Command',
                 'Get-NetAdapter | Where-Object {$_.Status -eq "Up"} | Select-Object -ExpandProperty Name'
             ])
             
-            if success:
-                interfaces = [line.strip() for line in output.strip().split('\\n') if line.strip()]
-                self.logger.debug(f"Found network interfaces: {interfaces}")
+            if success and output.strip():
+                interfaces = [line.strip() for line in output.strip().split('\n') if line.strip()]
+                self.logger.debug(f"Found network interfaces via PowerShell: {interfaces}")
                 return interfaces
             else:
-                self.logger.error("Failed to get network interfaces")
-                return []
+                # Fallback: Use ipconfig to get interface names
+                self.logger.warning("PowerShell failed, trying ipconfig fallback")
+                return self._get_interfaces_fallback()
                 
         except Exception as e:
             self.logger.error(f"Failed to get network interfaces: {e}")
-            return []
+            return self._get_interfaces_fallback()
+    
+    def _get_interfaces_fallback(self) -> List[str]:
+        """Fallback method to get network interfaces using ipconfig"""
+        try:
+            success, output = self._run_command(['ipconfig', '/all'])
+            if success:
+                interfaces = []
+                lines = output.split('\n')
+                for line in lines:
+                    line = line.strip()
+                    if line and not line.startswith(' ') and ':' in line and not line.startswith('Windows IP'):
+                        # Extract interface name (remove trailing colon and spaces)
+                        interface_name = line.split(':')[0].strip()
+                        if interface_name and interface_name not in ['Windows IP Configuration', 'Ethernet adapter', 'Wireless LAN adapter']:
+                            interfaces.append(interface_name)
+                
+                self.logger.debug(f"Found network interfaces via ipconfig: {interfaces}")
+                return interfaces
+            else:
+                # Last resort: return a default interface
+                self.logger.warning("Using default interface name")
+                return ['Ethernet']
+        except Exception as e:
+            self.logger.error(f"Fallback interface detection failed: {e}")
+            return ['Ethernet']
     
     def get_current_dns(self, interface: Optional[str] = None) -> Dict[str, str]:
         """
@@ -128,7 +183,7 @@ class DNSConfig:
             
             for iface in interfaces:
                 success, output = self._run_command([
-                    'powershell', '-Command',
+                    'powershell.exe', '-Command',
                     f'Get-DnsClientServerAddress -InterfaceAlias "{iface}" -AddressFamily IPv4 | Select-Object -ExpandProperty ServerAddresses'
                 ])
                 
@@ -166,12 +221,17 @@ class DNSConfig:
             else:
                 interfaces = self.get_network_interfaces()
             
+            # If no interfaces found, use fallback
+            if not interfaces:
+                self.logger.warning("No network interfaces found, using fallback")
+                interfaces = ['Ethernet']
+            
             success_count = 0
             
             for iface in interfaces:
                 # Set DNS servers
                 success, output = self._run_command([
-                    'powershell', '-Command',
+                    'powershell.exe', '-Command',
                     f'Set-DnsClientServerAddress -InterfaceAlias "{iface}" -ServerAddresses "{primary}","{secondary}"'
                 ])
                 
@@ -179,7 +239,7 @@ class DNSConfig:
                     success_count += 1
                     self.logger.info(f"DNS set for interface {iface}: {primary}, {secondary}")
                 else:
-                    self.logger.error(f"Failed to set DNS for interface {iface}")
+                    self.logger.warning(f"Failed to set DNS for interface {iface}: {output}")
             
             if success_count > 0:
                 self.logger.log_blocking_action("set_dns_servers", success_count, True)
@@ -188,12 +248,13 @@ class DNSConfig:
                 return True
             else:
                 self.logger.log_blocking_action("set_dns_servers", 0, False)
+                self.logger.warning("DNS configuration failed - you may need to set DNS manually")
                 return False
                 
         except Exception as e:
             self.logger.error(f"Failed to set DNS servers: {e}")
             self.logger.log_blocking_action("set_dns_servers", 0, False)
-            raise
+            return False
     
     def set_dns_by_type(self, dns_type: str, interface: Optional[str] = None) -> bool:
         """
@@ -254,7 +315,7 @@ class DNSConfig:
             for iface in interfaces:
                 # Reset to automatic DNS
                 success, output = self._run_command([
-                    'powershell', '-Command',
+                    'powershell.exe', '-Command',
                     f'Set-DnsClientServerAddress -InterfaceAlias "{iface}" -ResetServerAddresses'
                 ])
                 

@@ -289,7 +289,7 @@ class AdultBlockerApp:
                 
                 # Run PowerShell script with install option
                 cmd = f'powershell.exe -ExecutionPolicy Bypass -File "{ps_script}" -Install'
-                process = subprocess.Popen(cmd, shell=True, capture_output=True, text=True)
+                process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
                 
                 self.status_var.set("PowerShell blocker completed")
                 messagebox.showinfo("PowerShell Blocker", "Ultimate blocker executed successfully!")
@@ -386,12 +386,13 @@ class AdultBlockerApp:
         """Update the blocklist information display"""
         try:
             domains = self.blocklist_updater.get_domains()
+            domains_list = list(domains)
             info = f"Total blocked domains: {len(domains)}\n\n"
             info += "Recent domains:\n"
-            for domain in domains[:20]:  # Show first 20
-                info += f"• {domain}\n"
-            if len(domains) > 20:
-                info += f"... and {len(domains) - 20} more"
+            for domain in domains_list[:20]:  # Show first 20
+                info += f"\u2022 {domain}\n"
+            if len(domains_list) > 20:
+                info += f"... and {len(domains_list) - 20} more"
             
             self.blocklist_info.delete(1.0, tk.END)
             self.blocklist_info.insert(1.0, info)

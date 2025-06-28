@@ -7,9 +7,9 @@ Tests all modules without requiring GUI
 import sys
 import os
 
-# Add current directory to path
-current_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, current_dir)
+# Add project root to path
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
 
 def test_modules():
     """Test all modules and their basic functionality"""
@@ -235,7 +235,7 @@ def test_data_creation():
     print('-' * 30)
     
     try:
-        data_dir = os.path.join(current_dir, 'data')
+        data_dir = os.path.join(project_root, 'data')
         if not os.path.exists(data_dir):
             os.makedirs(data_dir)
         

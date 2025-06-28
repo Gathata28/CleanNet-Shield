@@ -529,7 +529,7 @@ class BlocklistUpdater:
             return stats
         except Exception as e:
             self.logger.error(f"Failed to get stats: {e}")
-            return {"error": str(e)"}
+            return {"error": str(e)}
     
     def categorize_domains(self, domains: Set[str]) -> Dict[str, Set[str]]:
         """
