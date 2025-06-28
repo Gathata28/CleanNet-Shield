@@ -1,0 +1,188 @@
+[
+  {
+    "timestamp": "2025-06-28T17:35:15.571986",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:35:15.582569",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:35:15.610217",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:35:15.626138",
+    "level": "ERROR",
+    "message": "Error predicting relapse risk: This StandardScaler instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:35:15.653637",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:35:15.679160",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:35:15.707837",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:35:18.629909",
+    "level": "INFO",
+    "message": "Generated 3 personalized recommendations",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:35:19.217987",
+    "level": "INFO",
+    "message": "Tracked recommendation usage: test_rec, used: True",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:35:21.318017",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:35:21.362342",
+    "level": "ERROR",
+    "message": "Error predicting relapse risk: This StandardScaler instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:35:21.391079",
+    "level": "INFO",
+    "message": "Generated 3 personalized recommendations",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:35:21.680582",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:35:21.709181",
+    "level": "ERROR",
+    "message": "Error predicting relapse risk: This StandardScaler instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:35:21.755016",
+    "level": "INFO",
+    "message": "Generated 3 personalized recommendations",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:42:48.196735",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:42:48.214177",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:42:48.254410",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:42:48.292817",
+    "level": "ERROR",
+    "message": "Error predicting relapse risk: This StandardScaler instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:42:48.317352",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:42:48.346824",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:42:48.382300",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:42:51.191197",
+    "level": "INFO",
+    "message": "Generated 3 personalized recommendations",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:42:51.317743",
+    "level": "INFO",
+    "message": "Tracked recommendation usage: test_rec, used: True",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:42:52.598758",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:42:52.632276",
+    "level": "ERROR",
+    "message": "Error predicting relapse risk: This StandardScaler instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:42:52.669718",
+    "level": "INFO",
+    "message": "Generated 3 personalized recommendations",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:42:52.896738",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:42:52.963209",
+    "level": "ERROR",
+    "message": "Error predicting relapse risk: This StandardScaler instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:42:53.046993",
+    "level": "INFO",
+    "message": "Generated 3 personalized recommendations",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T17:44:54.768372",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "recommendation_id": "test_rec",
+    "user_id": 1,
+    "used": true,
+    "feedback": "Great recommendation!",
+    "timestamp": "2025-06-28T17:42:51.314797"
+  }
+]

@@ -251,6 +251,16 @@ class EnhancedWindowsManager(EnhancedPlatformManager):
         except Exception:
             return []
 
+    def get_system_info(self) -> dict:
+        """Return basic system/platform info for diagnostics"""
+        return {
+            "platform": "Windows",
+            "os_version": platform.version(),
+            "machine": platform.machine(),
+            "processor": platform.processor(),
+            "hostname": platform.node(),
+        }
+
 
 class EnhancedLinuxManager(EnhancedPlatformManager):
     """Enhanced Linux implementation with iptables and systemd-resolved"""
@@ -456,6 +466,15 @@ DNS={', '.join(dns_servers)}
         except Exception:
             return {"status": "unknown"}
 
+    def get_system_info(self) -> dict:
+        return {
+            "platform": "Linux",
+            "os_version": platform.version(),
+            "machine": platform.machine(),
+            "processor": platform.processor(),
+            "hostname": platform.node(),
+        }
+
 
 class EnhancedMacOSManager(EnhancedPlatformManager):
     """Enhanced macOS implementation with pf firewall and DNS configuration"""
@@ -567,7 +586,7 @@ class EnhancedMacOSManager(EnhancedPlatformManager):
             result = subprocess.run(cmd, capture_output=True, text=True)
             
             return {
-                "platform": "macOS",
+                "platform": "Darwin",
                 "interfaces": result.stdout,
                 "pf_status": self._check_pf_status()
             }
@@ -602,6 +621,15 @@ class EnhancedMacOSManager(EnhancedPlatformManager):
             return {"status": result.stdout}
         except Exception:
             return {"status": "unknown"}
+
+    def get_system_info(self) -> dict:
+        return {
+            "platform": "Darwin",
+            "os_version": platform.version(),
+            "machine": platform.machine(),
+            "processor": platform.processor(),
+            "hostname": platform.node(),
+        }
 
 
 def get_enhanced_platform_manager() -> EnhancedPlatformManager:

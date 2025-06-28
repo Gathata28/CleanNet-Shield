@@ -45,6 +45,11 @@ coverage.xml
 .pytest_cache/
 cover/
 
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
 # Virtual environments
 .env
 .venv
@@ -109,27 +114,9 @@ test_output.log
 .installed.cfg
 *.egg
 
-# Virtual environments
-venv/
-env/
-ENV/
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Log files
-*.log
-
-# Temporary files
-*.tmp
-*.temp
+# Security reports
+bandit-report.json
+safety-report.json
 
 # Application data (keep structure but ignore logs)
 data/logs/*

@@ -9,7 +9,15 @@ from .platform_manager import (
     LinuxManager,
     MacOSManager,
 )
+from .enhanced_platform_manager import (
+    EnhancedPlatformManager,
+    EnhancedWindowsManager,
+    EnhancedLinuxManager,
+    EnhancedMacOSManager,
+    get_enhanced_platform_manager,
+)
 from .blocking_rule import BlockingRule
+from .ai_classifier import AIDomainClassifier, DomainClassification
 
 __all__ = [
     "AdvancedBlocker",
@@ -17,5 +25,12 @@ __all__ = [
     "WindowsManager",
     "LinuxManager",
     "MacOSManager",
+    "EnhancedPlatformManager",
+    "EnhancedWindowsManager",
+    "EnhancedLinuxManager",
+    "EnhancedMacOSManager",
+    "get_enhanced_platform_manager",
     "BlockingRule",
+    "AIDomainClassifier",
+    "DomainClassification",
 ]

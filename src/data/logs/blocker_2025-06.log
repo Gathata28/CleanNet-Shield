@@ -1,0 +1,31 @@
+2025-06-28 17:35:15,572 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:35:15,582 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:35:15,610 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:35:15,626 - AdultBlocker - ERROR - Error predicting relapse risk: This StandardScaler instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator. | Data: None
+2025-06-28 17:35:15,653 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:35:15,679 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:35:15,707 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:35:18,629 - AdultBlocker - INFO - Generated 3 personalized recommendations | Data: None
+2025-06-28 17:35:19,218 - AdultBlocker - INFO - Tracked recommendation usage: test_rec, used: True | Data: None
+2025-06-28 17:35:21,318 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:35:21,362 - AdultBlocker - ERROR - Error predicting relapse risk: This StandardScaler instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator. | Data: None
+2025-06-28 17:35:21,391 - AdultBlocker - INFO - Generated 3 personalized recommendations | Data: None
+2025-06-28 17:35:21,680 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:35:21,709 - AdultBlocker - ERROR - Error predicting relapse risk: This StandardScaler instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator. | Data: None
+2025-06-28 17:35:21,755 - AdultBlocker - INFO - Generated 3 personalized recommendations | Data: None
+2025-06-28 17:42:48,196 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:42:48,214 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:42:48,254 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:42:48,292 - AdultBlocker - ERROR - Error predicting relapse risk: This StandardScaler instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator. | Data: None
+2025-06-28 17:42:48,317 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:42:48,346 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:42:48,382 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:42:51,191 - AdultBlocker - INFO - Generated 3 personalized recommendations | Data: None
+2025-06-28 17:42:51,317 - AdultBlocker - INFO - Tracked recommendation usage: test_rec, used: True | Data: None
+2025-06-28 17:42:52,598 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:42:52,632 - AdultBlocker - ERROR - Error predicting relapse risk: This StandardScaler instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator. | Data: None
+2025-06-28 17:42:52,669 - AdultBlocker - INFO - Generated 3 personalized recommendations | Data: None
+2025-06-28 17:42:52,896 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
+2025-06-28 17:42:52,963 - AdultBlocker - ERROR - Error predicting relapse risk: This StandardScaler instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator. | Data: None
+2025-06-28 17:42:53,047 - AdultBlocker - INFO - Generated 3 personalized recommendations | Data: None
+2025-06-28 17:44:54,768 - AdultBlocker - INFO - Initialized new relapse prediction model | Data: None
