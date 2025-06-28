@@ -7,39 +7,37 @@ import ctypes
 import sys
 import os
 
-def check_admin_rights():
+
+def check_admin_rights() -> bool:
     """
     Check if the current process has administrator privileges
     Returns True if running as admin, False otherwise
     """
     try:
         return ctypes.windll.shell32.IsUserAnAdmin()
-    except:
+    except Exception:
         return False
 
-def request_admin_rights():
+
+def request_admin_rights() -> bool:
     """
     Request administrator privileges by restarting the script with elevated rights
     """
     if check_admin_rights():
         return True
-    
+
     try:
         # Re-run the program with admin rights
         ctypes.windll.shell32.ShellExecuteW(
-            None,
-            "runas",
-            sys.executable,
-            " ".join(sys.argv),
-            None,
-            1
+            None, "runas", sys.executable, " ".join(sys.argv), None, 1
         )
         return True
     except Exception as e:
         print(f"Failed to request admin rights: {e}")
         return False
 
-def ensure_admin_rights():
+
+def ensure_admin_rights() -> None:
     """
     Ensure admin rights, exit if not available
     """
@@ -51,14 +49,17 @@ def ensure_admin_rights():
             print("Failed to obtain administrator privileges. Exiting.")
             sys.exit(1)
 
-def can_modify_hosts():
+
+def can_modify_hosts() -> bool:
     """
     Check if we can modify the hosts file
     """
-    hosts_path = os.path.join(os.environ.get('WINDIR', 'C:\\Windows'), 'System32', 'drivers', 'etc', 'hosts')
+    hosts_path = os.path.join(
+        os.environ.get("WINDIR", "C:\\Windows"), "System32", "drivers", "etc", "hosts"
+    )
     try:
         # Try to open hosts file for writing
-        with open(hosts_path, 'a') as f:
+        with open(hosts_path, "a") as _:
             pass
         return True
     except PermissionError:
@@ -66,11 +67,13 @@ def can_modify_hosts():
     except Exception:
         return False
 
-def can_modify_dns():
+
+def can_modify_dns() -> bool:
     """
     Check if we can modify DNS settings (requires admin)
     """
     return check_admin_rights()
+
 
 if __name__ == "__main__":
     print(f"Running as admin: {check_admin_rights()}")
