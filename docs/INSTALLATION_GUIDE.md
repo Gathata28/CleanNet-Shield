@@ -5,6 +5,7 @@
 Your system needs the following components installed:
 
 ### ✅ **STEP 1: Install Python**
+
 ```powershell
 # Using winget (recommended)
 winget install Python.Python.3.12
@@ -14,6 +15,7 @@ winget install Python.Python.3.12
 ```
 
 ### ✅ **STEP 2: Install Required Python Packages**
+
 ```powershell
 # Install requests library (only required dependency)
 pip install requests
@@ -23,6 +25,7 @@ pip install -r requirements.txt
 ```
 
 ### ✅ **STEP 3: Verify Installation**
+
 ```powershell
 # Test Python installation
 python --version
@@ -36,11 +39,13 @@ python -c "import requests; print('✅ Dependencies OK')"
 ## 🛠️ **INSTALLATION METHODS**
 
 ### **METHOD 1: Easy Launch (Recommended)**
+
 1. **Double-click** `scripts\start.bat`
 2. Follow the prompts
 3. Application will check dependencies and launch
 
 ### **METHOD 2: Automated Setup**
+
 ```powershell
 # Navigate to application directory
 cd C:\Users\HomePC\ContentBlocker\AdultBlockerApp
@@ -50,6 +55,7 @@ scripts\setup.bat
 ```
 
 ### **METHOD 3: Python Direct**
+
 ```powershell
 # Navigate to application directory
 cd C:\Users\HomePC\ContentBlocker\AdultBlockerApp
@@ -59,6 +65,7 @@ python launcher.py
 ```
 
 ### **METHOD 3: Test First, Then Launch**
+
 ```powershell
 # Run comprehensive tests
 python test_suite.py
@@ -72,6 +79,7 @@ python main.py
 ## 🔧 **TROUBLESHOOTING**
 
 ### **Python Not Found**
+
 ```powershell
 # Check if Python is in PATH
 where python
@@ -84,6 +92,7 @@ where python3
 ```
 
 ### **Permission Errors**
+
 ```powershell
 # Run PowerShell as Administrator
 # Right-click PowerShell → "Run as administrator"
@@ -94,6 +103,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 ### **Missing Dependencies**
+
 ```powershell
 # Force reinstall packages
 pip install --force-reinstall requests
@@ -107,6 +117,7 @@ python -m pip install --upgrade pip
 ## 🎯 **POST-INSTALLATION VERIFICATION**
 
 ### **Quick Test Commands:**
+
 ```powershell
 # Test 1: Check modules load
 python -c "import sys; sys.path.append('.'); import utils.logger; print('✅ Modules OK')"
@@ -119,6 +130,7 @@ python test_suite.py
 ```
 
 ### **Expected Output:**
+
 - ✅ All modules imported successfully
 - ✅ Objects created without errors
 - ✅ Data directories created
@@ -154,17 +166,20 @@ After successful installation:
 ## 📦 **WHAT GETS INSTALLED**
 
 ### **Application Files:**
+
 - `main.py` - Main GUI application
 - `launcher.py` - Smart launcher with dependency checking
 - `test_suite.py` - Comprehensive testing
 - `start.bat` - Windows batch launcher
 
 ### **Core Modules:**
+
 - `blocker/` - Content blocking system
 - `recovery/` - Recovery support tools
 - `utils/` - Utility functions
 
 ### **Data Directories:**
+
 - `data/logs/` - Application logs
 - `data/journal/` - Journal entries
 - `data/streaks/` - Streak tracking
@@ -197,6 +212,7 @@ If you encounter issues:
 Once Python is installed and the tests pass, your comprehensive Adult Content Blocker & Recovery Tool will be fully operational on Windows!
 
 **Commands to run after Python installation:**
+
 ```powershell
 cd C:\Users\HomePC\ContentBlocker\AdultBlockerApp
 python test_suite.py

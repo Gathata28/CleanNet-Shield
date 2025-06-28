@@ -9,6 +9,7 @@ A comprehensive desktop application for Windows that combines multi-layer adult 
 ## 🌟 Features
 
 ### 🔒 Multi-Layer Content Blocking
+
 - **Hosts file blocking** - System-level domain blocking
 - **DNS filtering** - Family-safe DNS servers (CleanBrowsing, OpenDNS, etc.)
 - **PowerShell integration** - Advanced blocking capabilities
@@ -16,6 +17,7 @@ A comprehensive desktop application for Windows that combines multi-layer adult 
 - **Social media filtering** - Block NSFW content on Reddit, Twitter, etc.
 
 ### 🎯 Recovery Support Tools
+
 - **Streak tracking** - Monitor clean days with 9 milestone achievements
 - **Daily journaling** - Mood, trigger, and coping strategy tracking
 - **Accountability system** - Email and Telegram notifications
@@ -23,6 +25,7 @@ A comprehensive desktop application for Windows that combines multi-layer adult 
 - **Emergency support** - Crisis intervention resources
 
 ### 🛠️ Technical Features
+
 - **Professional GUI** - Intuitive tabbed interface
 - **Comprehensive logging** - JSON-based activity tracking
 - **Admin privilege handling** - Automatic elevation when needed
@@ -32,6 +35,7 @@ A comprehensive desktop application for Windows that combines multi-layer adult 
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Windows 10/11
 - Python 3.8+ (will be installed automatically if missing)
 - Administrator privileges
@@ -39,17 +43,20 @@ A comprehensive desktop application for Windows that combines multi-layer adult 
 ### Installation
 
 1. **Download the latest release** or clone the repository:
+
    ```bash
    git clone https://github.com/kWan/cleannet-shield.git
    cd cleannet-shield
    ```
 
 2. **Run the easy installer** (as Administrator):
+
    ```cmd
    scripts\start.bat
    ```
 
 3. **Or launch directly with Python**:
+
    ```cmd
    python launcher.py
    ```
@@ -70,7 +77,7 @@ A comprehensive desktop application for Windows that combines multi-layer adult 
 
 ## 🏗️ Project Structure
 
-```
+```text
 CleanNet-Shield/
 ├── main.py                    # Main GUI application
 ├── launcher.py                # Smart launcher with dependency checking
@@ -104,14 +111,18 @@ CleanNet-Shield/
 ## 🔧 Configuration
 
 ### Blocking Sources
+
 The application fetches blocklists from:
+
 - StevenBlack hosts (multiple variants)
 - Ultimate NSFW blocklists
 - Custom domain additions
 - Social media adult content patterns
 
 ### DNS Servers
+
 Supported family-safe DNS providers:
+
 - CleanBrowsing Family Filter (default)
 - OpenDNS FamilyShield
 - Cloudflare for Families
@@ -119,7 +130,9 @@ Supported family-safe DNS providers:
 - AdGuard Family Protection
 
 ### Notifications
+
 Configure accountability via:
+
 - **Email**: SMTP (Gmail supported)
 - **Telegram**: Bot notifications
 
@@ -134,11 +147,13 @@ Configure accountability via:
 ## 🧪 Testing
 
 Run the comprehensive test suite:
+
 ```cmd
 python scripts\test_suite.py
 ```
 
 Expected results:
+
 - All modules load successfully
 - Data directories created
 - Admin privileges detected
@@ -155,6 +170,7 @@ Expected results:
 ## 🤝 Contributing
 
 Contributions are welcome! Areas for improvement:
+
 - Additional blocklist sources
 - New recovery features
 - GUI enhancements
@@ -179,6 +195,7 @@ This tool is designed to support recovery efforts and should be used responsibly
 ## 🎯 Roadmap
 
 ### Planned Features
+
 - [ ] Windows Service mode for tamper protection
 - [ ] File system monitoring for offline content
 - [ ] Browser extension integration
@@ -186,6 +203,7 @@ This tool is designed to support recovery efforts and should be used responsibly
 - [ ] Cloud sync (optional)
 
 ### Completed ✅
+
 - [x] Multi-layer content blocking
 - [x] Recovery tracking tools
 - [x] Auto-updating blocklists
