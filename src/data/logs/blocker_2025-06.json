@@ -184,5 +184,413 @@
     "level": "INFO",
     "message": "Initialized new relapse prediction model",
     "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T18:51:33.778715",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T18:51:33.783332",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T18:51:33.810129",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T18:51:34.012239",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T18:54:12.928255",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T18:54:12.950213",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T18:54:12.967630",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T18:54:13.024056",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:00:53.216531",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:00:53.224996",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:00:53.259841",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:00:53.375885",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:29.576155",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:29.580492",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:29.605202",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:29.681070",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:36.479676",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:36.599181",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:36.666352",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:36.760759",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:37.726364",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:37.743966",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:37.763369",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:37.786841",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:38.474142",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:38.493297",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:38.512981",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:38.543481",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:39.266717",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:39.285227",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:39.308838",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:04:39.335622",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:21.702758",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:21.719738",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:21.737661",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:21.805815",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:27.088592",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:27.142500",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:27.190085",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:27.270849",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:28.423174",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:28.456276",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:28.492922",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:28.553582",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:29.643287",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:29.675431",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:29.708386",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:29.744186",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:30.918656",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:30.941184",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:30.966525",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:31.070138",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:51.511641",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:51.535269",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:51.563238",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T19:05:51.647811",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T20:32:37.482941",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T20:32:37.489052",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T20:32:37.523481",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T20:32:37.623635",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T20:44:20.173980",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T20:44:20.187164",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T20:44:20.234402",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T20:44:20.434184",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T21:05:37.696711",
+    "level": "DEBUG",
+    "message": "Streak tracker initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T21:05:37.704170",
+    "level": "DEBUG",
+    "message": "Journal system initialized",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T21:05:37.729510",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
+  },
+  {
+    "timestamp": "2025-06-28T21:05:37.833798",
+    "level": "INFO",
+    "message": "Initialized new relapse prediction model",
+    "data": {}
   }
 ]

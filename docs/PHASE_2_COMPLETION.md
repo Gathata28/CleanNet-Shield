@@ -178,7 +178,7 @@ CREATE TABLE network_events (
 
 ### **Phase 2 Test Suite Results**
 
-```
+```text
 ==================================== 33 passed, 11 warnings =====================================
 ```
 

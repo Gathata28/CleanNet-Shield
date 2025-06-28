@@ -71,7 +71,7 @@
 
 ### **Prerequisites**
 
-```bash
+   ```bash
 Python 3.8 or higher
 Administrator/root privileges (for system-level blocking)
 ```
@@ -109,7 +109,7 @@ python src/main.py
 
 ## 📁 **Project Structure**
 
-```
+```text
 CleanNet Shield/
 ├── src/                          # Main source code
 │   ├── core/                     # Core functionality
