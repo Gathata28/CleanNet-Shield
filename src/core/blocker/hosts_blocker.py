@@ -11,8 +11,8 @@ from typing import List, Set, Optional
 
 # Handle imports for both standalone and package usage
 try:
-    from ..utils.permissions import check_admin_rights, can_modify_hosts
-    from ..utils.logger import Logger
+    from src.utils.permissions import check_admin_rights, can_modify_hosts
+    from src.utils.logger import Logger
 except ImportError:
     # Fallback for standalone usage
     import sys

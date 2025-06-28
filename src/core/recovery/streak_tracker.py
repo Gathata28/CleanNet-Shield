@@ -10,7 +10,7 @@ from typing import Dict, List, Optional, Tuple
 
 # Handle imports for both standalone and package usage
 try:
-    from ..utils.logger import Logger
+    from src.utils.logger import Logger
 except ImportError:
     # Fallback for standalone usage
     import sys

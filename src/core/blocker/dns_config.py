@@ -9,8 +9,8 @@ from typing import List, Dict, Optional, Tuple
 
 # Handle imports for both standalone and package usage
 try:
-    from ..utils.permissions import check_admin_rights
-    from ..utils.logger import Logger
+    from src.utils.permissions import check_admin_rights
+    from src.utils.logger import Logger
 except ImportError:
     # Fallback for standalone usage
     import sys

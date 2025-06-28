@@ -36,14 +36,14 @@ def test_all_modules():
     # Test 1: Module Imports
     print("\n📦 Testing Module Imports...")
     try:
-        from utils.logger import Logger
-        from utils.permissions import check_admin_rights
-        from blocker.hosts_blocker import HostsBlocker
-        from blocker.dns_config import DNSConfig
-        from blocker.blocklist_updater import BlocklistUpdater
-        from recovery.journaling import Journal
-        from recovery.streak_tracker import StreakTracker
-        from recovery.accountability import AccountabilityBot
+        from src.utils.logger import Logger
+        from src.utils.permissions import check_admin_rights
+        from src.core.blocker.hosts_blocker import HostsBlocker
+        from src.core.blocker.dns_config import DNSConfig
+        from src.core.blocker.blocklist_updater import BlocklistUpdater
+        from src.core.recovery.journaling import Journal
+        from src.core.recovery.streak_tracker import StreakTracker
+        from src.core.recovery.accountability import AccountabilityBot
         print("✅ All modules imported successfully")
         tests["Module Imports"] = True
     except Exception as e:

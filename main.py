@@ -18,14 +18,14 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # Handle imports for both standalone and package usage
 try:
-    from blocker.hosts_blocker import HostsBlocker
-    from blocker.dns_config import DNSConfig
-    from blocker.blocklist_updater import BlocklistUpdater
-    from recovery.journaling import Journal
-    from recovery.streak_tracker import StreakTracker
-    from recovery.accountability import AccountabilityBot
-    from utils.permissions import check_admin_rights
-    from utils.logger import Logger
+    from src.core.blocker.hosts_blocker import HostsBlocker
+    from src.core.blocker.dns_config import DNSConfig
+    from src.core.blocker.blocklist_updater import BlocklistUpdater
+    from src.core.recovery.journaling import Journal
+    from src.core.recovery.streak_tracker import StreakTracker
+    from src.core.recovery.accountability import AccountabilityBot
+    from src.utils.permissions import check_admin_rights, ensure_admin_rights
+    from src.utils.logger import Logger
 except ImportError as e:
     print(f"Import error: {e}")
     print("Please ensure all modules are in the correct location.")
